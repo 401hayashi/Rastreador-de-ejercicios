@@ -1,1 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Exercise Tracker</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/css/bootstrap.min.css">
+  <style>
+    body {
+      padding: 20px;
+      font-family: Arial, sans-serif;
+    }
+    .container {
+      max-width: 800px;
+    }
+    .endpoint {
+      background: #f8f9fa;
+      padding: 15px;
+      border-radius: 5px;
+      margin-bottom: 10px;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1 class="text-center">Exercise Tracker</h1>
+    <p class="text-center">FreeCodeCamp Backend Project</p>
+    
+    <div class="endpoint">
+      <h4>POST /api/users</h4>
+      <p>Crear un nuevo usuario</p>
+      <code>{ "username": "testuser" }</code>
+    </div>
 
+    <div class="endpoint">
+      <h4>GET /api/users</h4>
+      <p>Obtener todos los usuarios</p>
+    </div>
+
+    <div class="endpoint">
+      <h4>POST /api/exercises/:userId</h4>
+      <p>Agregar ejercicio a un usuario</p>
+      <code>
+        {<br>
+        &nbsp;"description": "running",<br>
+        &nbsp;"duration": 30,<br>
+        &nbsp;"date": "2023-01-01"<br>
+        }
+      </code>
+    </div>
+
+    <div class="endpoint">
+      <h4>GET /api/exercises/:userId/log</h4>
+      <p>Obtener log de ejercicios</p>
+      <p>Parámetros opcionales: ?from=YYYY-MM-DD&to=YYYY-MM-DD&limit=10</p>
+    </div>
+  </div>
+</body>
+</html>
